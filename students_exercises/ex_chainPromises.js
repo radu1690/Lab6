@@ -1,12 +1,9 @@
 /*
     Get sunrise/sunset information of a city with the following 2 apis by chaining promises.
     First get the coordinates of the city with mapquest api and then use them with sunrise-sunset api.
-
-    Hint:   fetch(<api_url>) returns a promise which resolves a response object. 
-            response.json() returns a promise which resolves the json content of the response object.
 */
 
-const fetch = require('node-fetch');
+const axios = require("axios");
 const API_KEY = 'AslyL2n4doXKGqMoYaDpQvPNo4x9TwaC';
 const MAPQUEST_URL = `https://www.mapquestapi.com/geocoding/v1/address?key=${API_KEY}`;
 const SS_API = 'https://api.sunrise-sunset.org/json?';
@@ -16,7 +13,7 @@ const cityMapUrl = `${MAPQUEST_URL}&location=${cityName}`;
 
 console.log(`Sunrise/sunset in: ${cityName}`);
 
-//write your solution here
+//implement your solution here
 
 /*
   - call mapquestapi and get the response object

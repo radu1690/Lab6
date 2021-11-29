@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/radu1690/Lab6#readme",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "axios": "^0.24.0"
   }
 }

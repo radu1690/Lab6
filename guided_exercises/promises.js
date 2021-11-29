@@ -30,11 +30,17 @@ function func3(input){
     })
 }
 
-/* //one promise
+//one promise
 func1(0)
-.then(result => console.log(result))
-.catch(error => console.log(error))
-.finally(() => console.log("Ended"))  //optional */
+    .then(result => console.log(result))
+    .catch(error => console.log(error))
+    .finally(() => console.log("Done!"))  //optional
+
+/* //the above is equivalent to
+func1(0)
+    .then(console.log)
+    .catch(console.log)
+    .finally(() => console.log("Done!"));  //optional */
 
 
 
@@ -44,7 +50,7 @@ func1(0)
 .then(result => func3(result))
 .then(result => console.log(result))
 .catch(error => console.log(error))
-.finally(() => console.log("Ended")); //optional */
+.finally(() => console.log("Done!")); //optional */
 
 
 
@@ -54,21 +60,20 @@ func1(0)
 func1(0)
     .then(func2)
     .then(func3)
-    .then((result) => console.log(result))
-    .catch((error) => console.log(error))
-    .finally(() => console.log("Ended")); //optional */
+    .then(console.log)
+    .catch(console.log)
+    .finally(() => console.log("Done!")); //optional */
 
 
 
-/* //Promise and api example
-const fetch = require ('node-fetch');
+/* //Promise with api example
+const axios = require(`axios`);
 const url = 'http://api.icndb.com/jokes/random';
 
-fetch(url)
-    .then(res => res.json())
-    .then(json => console.log(json.value.joke))
-    .catch(err => console.error(err))
-    .finally(() => console.log("\nDone!")); */
+axios.get(url)
+    .then(response => console.log(response.data.value.joke))
+    .catch(error => console.log(error))
+    .finally(() => console.log("\nDone")); */
 
 
 
