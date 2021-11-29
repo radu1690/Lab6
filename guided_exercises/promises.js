@@ -1,5 +1,6 @@
 function func1(input){
     return new Promise(function (resolve, reject){
+        console.log("Func1  started...")
         setTimeout(() => {
             console.log("waited for 1 second");
             input = input + 1 ; 
@@ -10,6 +11,7 @@ function func1(input){
 }
 function func2(input){
     return new Promise(function (resolve, reject){
+        console.log("Func2  started...")
         setTimeout(() => {
             console.log("waited for 2 seconds");
             input = input + 2;
@@ -21,6 +23,7 @@ function func2(input){
 
 function func3(input){
     return new Promise(function (resolve, reject){
+        console.log("Func3  started...")
         setTimeout(() => {
             console.log("waited for 3 seconds");
             input = input + 3;
@@ -30,11 +33,11 @@ function func3(input){
     })
 }
 
-//one promise
+/* //one promise
 func1(0)
     .then(result => console.log(result))
     .catch(error => console.log(error))
-    .finally(() => console.log("Done!"))  //optional
+    .finally(() => console.log("Done!"))  //optional */
 
 /* //the above is equivalent to
 func1(0)
