@@ -1,4 +1,4 @@
-function findMostBeautifulCityByCoutryCode(countryCode, onSuccess, onFailure = (errorMessage) => console.log(errorMessage)){
+function findMostBeautifulCityByCoutryCode(countryCode, onSuccess, onFailure){
     console.log(`City Researcher: I am starting to look for the most beautfil city in ${countryCode}`)
 
     // Pretend that calculating the most beutiful city takes a long time 
@@ -25,12 +25,14 @@ function announceMostBeautifulCity(city){
     console.log(`The most beautiful city is ${city}`);
 }
 
-//callback with named function
+
 console.log("Example started: Using Callbacks")
 
-findMostBeautifulCityByCoutryCode("IT", announceMostBeautifulCity);
+//named function for onSuccess
+//lambda function for onFailure
+findMostBeautifulCityByCoutryCode("IT", announceMostBeautifulCity, (errorMessage) => console.log(errorMessage));
 
 console.log("Program is doing something else...");
-setTimeout(() => console.log('Program did in bg some other task that takes 2 seconds'), 2000);
+setTimeout(() => console.log('Program did in bg some other task that took 2 seconds'), 2000);
 
 

@@ -33,11 +33,11 @@ function func3(input){
     })
 }
 
-/* //one promise
+//one promise
 func1(0)
     .then(result => console.log(result))
     .catch(error => console.log(error))
-    .finally(() => console.log("Done!"))  //optional */
+    .finally(() => console.log("Done!"))  //optional
 
 /* //the above is equivalent to
 func1(0)
