@@ -17,8 +17,8 @@ console.log(`Sunrise/sunset in: ${cityName}`);
 
 /*
   - call mapquestapi and get the response object
-  - call json() to get the coordinates from the response object (the needed information is results[0].locations[0].latLng)
+  - get the coordinates from the response object (the needed information is results[0].locations[0].latLng)
   - call sunset api with the coordinates from mapquest api
-  - call json() to get the final information and print it on the console
+  - get the final information and print it on the console
 */
 
